@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Form</title>
+</head>
+<body>
+    <h1>Prediction Form</h1>
+    <form action="{{ url_for('predict_dataset') }}" method="post">
+        <label for="temperature">Temperature:</label>
+        <input type="text" id="temperature" name="temperature"><br><br>
+
+        <label for="rh">RH:</label>
+        <input type="text" id="rh" name="rh"><br><br>
+
+        <label for="ws">Ws:</label>
+        <input type="text" id="ws" name="ws"><br><br>
+
+        <label for="rain">Rain:</label>
+        <input type="text" id="rain" name="rain"><br><br>
+
+        <label for="ffmc">FFMC:</label>
+        <input type="text" id="ffmc" name="ffmc"><br><br>
+
+        <label for="dmc">DMC:</label>
+        <input type="text" id="dmc" name="dmc"><br><br>
+
+        <label for="isi">ISI:</label>
+        <input type="text" id="isi" name="isi"><br><br>
+
+        <label for="classes">Classes:</label>
+        <input type="text" id="classes" name="classes"><br><br>
+
+        <label for="region">Region:</label>
+        <input type="text" id="region" name="region"><br><br>
+
+        <button type="submit">Generate</button>
+    </form>
+
+    <h2>Predicted Result:</h2>
+    <p id="predicted-result">{{ prediction }}</p>
+</body>
+</html>
